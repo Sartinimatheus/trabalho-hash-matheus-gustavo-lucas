@@ -1,0 +1,29 @@
+<!-- templates/login.html -->
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Login - Trabalho Hash</title>
+</head>
+<body>
+  <h1>Login</h1>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul>
+      {% for category, msg in messages %}
+        <li><strong>{{ category }}:</strong> {{ msg }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post" action="{{ url_for('login') }}">
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Senha: <input type="password" name="senha" required></label><br>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <p>Ainda não tem conta? <a href="{{ url_for('register') }}">Registrar</a></p>
+</body>
+</html>

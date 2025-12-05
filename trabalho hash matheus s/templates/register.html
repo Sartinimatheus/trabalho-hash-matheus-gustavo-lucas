@@ -1,0 +1,29 @@
+<!-- templates/register.html -->
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Registrar - Trabalho Hash</title>
+</head>
+<body>
+  <h1>Registrar</h1>
+  <!-- Mensagens do Flask (flash) -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul>
+      {% for category, msg in messages %}
+        <li><strong>{{ category }}:</strong> {{ msg }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post" action="{{ url_for('register') }}">
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Senha: <input type="password" name="senha" required></label><br>
+    <button type="submit">Registrar</button>
+  </form>
+
+  <p>Já tem conta? <a href="{{ url_for('login') }}">Entrar</a></p>
+</body>
+</html>
