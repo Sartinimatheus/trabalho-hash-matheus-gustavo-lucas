@@ -14,6 +14,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from conexao import criar_conexao
 from mysql.connector import Error
 
+
 app = Flask(__name__)
 app.secret_key = "troque_essa_chave_por_uma_aleatoria_e_segura"  # necessário para session e flash
 

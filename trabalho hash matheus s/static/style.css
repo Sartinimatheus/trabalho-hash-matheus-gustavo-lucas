@@ -1,0 +1,40 @@
+/* ============================
+     ESTILO MINIMALISTA LIMPO
+   ============================ */
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 380px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
